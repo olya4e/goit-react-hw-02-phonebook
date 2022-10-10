@@ -24,11 +24,12 @@ export class App extends Component {
     }
     let isAdded = false
     const { contacts } = this.state
-    contacts.map(contact => {
+    contacts.map((contact) =>{
       if (contact.name.toLowerCase() === name.toLowerCase()) {
       isAdded=true
        return alert(`${name} is already in contacts`)
-      }  
+      }
+      return null
     })
     if (isAdded) {
       return
