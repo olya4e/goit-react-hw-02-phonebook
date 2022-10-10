@@ -4,7 +4,7 @@ import { ContactForm } from './ContactForm/ContactForm '
 import { ContactList } from "./ContactList/ContactList"
 import { Filter } from "./Filter/Filter";
 import { nanoid } from "nanoid";
-import Notiflix from 'notiflix'
+
 
 export class App extends Component {
   state = {
@@ -27,8 +27,8 @@ export class App extends Component {
     const { contacts } = this.state
     contacts.map((contact) =>{
       if (contact.name.toLowerCase() === name.toLowerCase()) {
-      isAdded=true
-       Notiflix.Notify.info(`${name} is already in contacts`)
+        isAdded = true
+        alert(`${name} is already in contacts`)
       }
       return null
     })
