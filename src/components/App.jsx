@@ -34,7 +34,7 @@ export class App extends Component {
       return
     }
     else {
-      this.setState(prevState => ({
+      return this.setState(prevState => ({
           contacts:[...prevState.contacts, newContact]
         }))}
     }
